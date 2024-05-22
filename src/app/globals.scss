@@ -2,12 +2,15 @@
 
 /* Variables */
 :root {
-	--dark: #171717;
+	--dark: #181818;
 	--light: #eaebed;
-	--add: #3d3d3d;
+	--add: #2d2d2d;
+	--red: #c10001;
+	--blue: #1c3f6d;
 
 	--main: var(--dark);
 	--text: var(--light);
+	--accent: var(--red);
 }
 
 /* Reset base styles */
@@ -17,16 +20,22 @@
 
 html {
 	scroll-behavior: smooth;
-	font-size: 16px;
+	font-size: 18px;
 }
 
-.main {
+body {
 	background-color: var(--main);
 	color: var(--text);
 	font-family: var(--nu-font);
-	min-height: 100vh;
+	height: 100vh;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.wrapper {
+	max-width: 1140px;
+	height: auto;
+	margin: 0 auto;
 }

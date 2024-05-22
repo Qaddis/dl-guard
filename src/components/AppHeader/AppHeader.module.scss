@@ -1,0 +1,50 @@
+.header {
+	width: 100%;
+	height: auto;
+	padding: 15px 25px;
+	background-color: var(--dark);
+	border-bottom: 3px solid var(--add);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+	position: relative;
+
+	font-size: 2.25em;
+	font-weight: bold;
+	font-family: var(--ds-font);
+	color: var(--blue);
+
+	.badge {
+		position: absolute;
+		right: -30px;
+		top: 10px;
+
+		font-family: var(--rb-font);
+		font-size: 0.35em;
+		color: var(--red);
+	}
+
+	em {
+		font-style: normal;
+		color: var(--red);
+	}
+
+	img {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.nav {
+	display: flex;
+	column-gap: 30px;
+}
