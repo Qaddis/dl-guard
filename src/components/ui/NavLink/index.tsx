@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 import type { CSSProperties, FC, ReactNode } from "react"
 import classes from "./NavLink.module.scss"
@@ -14,7 +15,7 @@ const NavLink: FC<IProps> = ({ children, to, styles }) => {
 	const path = usePathname()
 
 	return (
-		<a
+		<Link
 			style={styles}
 			className={
 				path === to ? `${classes.link} ${classes.active}` : classes.link
@@ -22,7 +23,7 @@ const NavLink: FC<IProps> = ({ children, to, styles }) => {
 			href={to}
 		>
 			{children}
-		</a>
+		</Link>
 	)
 }
 
