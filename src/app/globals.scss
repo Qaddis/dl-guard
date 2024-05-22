@@ -1,0 +1,32 @@
+/* - Preparing for styling - */
+
+/* Variables */
+:root {
+	--dark: #171717;
+	--light: #eaebed;
+	--add: #3d3d3d;
+
+	--main: var(--dark);
+	--text: var(--light);
+}
+
+/* Reset base styles */
+@import "./reset";
+
+/* - My base styles - */
+
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
+}
+
+.main {
+	background-color: var(--main);
+	color: var(--text);
+	font-family: var(--nu-font);
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
