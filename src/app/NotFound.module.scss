@@ -1,0 +1,31 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 35px;
+}
+
+.heading {
+	font-family: var(--rb-font);
+	font-size: 2.2em;
+
+	span {
+		color: var(--accent);
+		animation: shadows 3.5s infinite;
+	}
+}
+
+@keyframes shadows {
+	0% {
+		text-shadow: none;
+	}
+
+	50% {
+		text-shadow: 0 0 10px var(--accent);
+	}
+
+	100% {
+		text-shadow: none;
+	}
+}
