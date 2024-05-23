@@ -11,7 +11,7 @@ const nunito = Nunito({
 })
 
 const roboto = Roboto_Slab({
-	weight: ["400", "800"],
+	weight: ["400", "600"],
 	subsets: ["cyrillic"],
 	variable: "--rb-font"
 })
