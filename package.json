@@ -1,24 +1,29 @@
 {
-  "name": "dl-guard-v2",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "framer-motion": "^11.2.6",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "sass": "^1.77.2",
-    "typescript": "^5"
-  }
+	"name": "dl-guard-v2",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@react-three/drei": "^9.105.6",
+		"@react-three/fiber": "^8.16.6",
+		"@types/three": "^0.164.1",
+		"framer-motion": "^11.2.6",
+		"next": "14.2.3",
+		"react": "^18",
+		"react-dom": "^18",
+		"three": "^0.164.1",
+		"three-stdlib": "^2.30.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"sass": "^1.77.2",
+		"typescript": "^5"
+	}
 }
