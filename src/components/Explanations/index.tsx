@@ -33,7 +33,7 @@ const Explanations: FC = () => {
 
 	const variants: Variants = {
 		hidden: {
-			y: "200%"
+			y: "150%"
 		},
 		show: {
 			y: 0
@@ -41,7 +41,7 @@ const Explanations: FC = () => {
 	}
 
 	const transition: Transition = {
-		duration: 0.25,
+		duration: 0.2,
 		ease: "easeInOut"
 	}
 
@@ -65,7 +65,7 @@ const Explanations: FC = () => {
 						setInf(infEnum.device)
 					}}
 					variants={variants}
-					transition={{ ...transition, delay: 0.15 }}
+					transition={{ ...transition, delay: 0.12 }}
 					className={classes.part}
 				>
 					Считывающее устройство
@@ -78,7 +78,7 @@ const Explanations: FC = () => {
 						setInf(infEnum.soft)
 					}}
 					variants={variants}
-					transition={{ ...transition, delay: 0.3 }}
+					transition={{ ...transition, delay: 0.22 }}
 					className={classes.part}
 				>
 					Компьютерное приложение
@@ -91,7 +91,7 @@ const Explanations: FC = () => {
 						setInf(infEnum.server)
 					}}
 					variants={variants}
-					transition={{ ...transition, delay: 0.45 }}
+					transition={{ ...transition, delay: 0.32 }}
 					className={classes.part}
 				>
 					Сервер

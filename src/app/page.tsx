@@ -12,8 +12,8 @@ export default function Home() {
 	const advsRef = useRef<HTMLDivElement>(null)
 	const techsRef = useRef<HTMLDivElement>(null)
 
-	const advsInView = useInView(advsRef, { amount: 0.6, once: true })
-	const techsInView = useInView(techsRef, { amount: 0.6, once: true })
+	const advsInView = useInView(advsRef, { amount: 0.4, once: true })
+	const techsInView = useInView(techsRef, { amount: 0.4, once: true })
 
 	return (
 		<div className="wrapper">

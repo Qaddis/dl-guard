@@ -4,6 +4,11 @@
 	padding: 15px 25px;
 	background-color: var(--dark);
 	border-bottom: 3px solid var(--add);
+
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
 }
 
 .wrapper {
