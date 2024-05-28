@@ -42,4 +42,10 @@ body {
 
 .main {
 	padding: 0 25px;
+
+	hr {
+		border: none;
+		width: 100%;
+		border-bottom: 1px solid var(--add);
+	}
 }
