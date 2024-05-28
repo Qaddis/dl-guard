@@ -47,7 +47,9 @@ const Explanations: FC = () => {
 
 	return (
 		<section className={classes.information}>
-			<h2 className={classes.heading}>Как устроена система?</h2>
+			<h2 className={classes.heading}>
+				Как устроена система <span>DL Guard</span>?
+			</h2>
 			<p>Наведите указатель, чтобы узнать подробнее</p>
 
 			<motion.div

@@ -1,0 +1,39 @@
+.item {
+	width: 100%;
+	padding: 3px 15px;
+	display: flex;
+	flex-direction: column;
+	border-left: 5px solid var(--red);
+	border-radius: 5px;
+	row-gap: 5px;
+
+	h3 {
+		font-family: var(--rb-font);
+		font-size: 1.35em;
+		font-weight: bold;
+
+		i {
+			font-style: normal;
+			color: var(--red);
+		}
+	}
+
+	p {
+		max-width: 60%;
+		line-height: 1.2;
+	}
+
+	&.right {
+		border-left: none;
+		border-right: 5px solid var(--red);
+		align-items: flex-end;
+
+		p {
+			text-align: right;
+		}
+	}
+
+	&.techs {
+		border-color: var(--blue) !important;
+	}
+}

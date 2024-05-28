@@ -24,6 +24,7 @@ html {
 }
 
 body {
+	overflow-x: hidden;
 	background-color: var(--main);
 	color: var(--text);
 	font-family: var(--nu-font);
@@ -47,5 +48,12 @@ body {
 		border: none;
 		width: 100%;
 		border-bottom: 1px solid var(--add);
+	}
+
+	.heading {
+		font-family: var(--rb-font);
+		font-size: 1.8em;
+		color: var(--accent);
+		font-weight: bold;
 	}
 }

@@ -15,6 +15,10 @@
 .heading {
 	font-family: var(--rb-font);
 	font-size: 1.8em;
+
+	span {
+		color: var(--accent);
+	}
 }
 
 .parts {
