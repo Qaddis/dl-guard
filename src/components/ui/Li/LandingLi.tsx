@@ -1,9 +1,6 @@
-"use client"
-
 import type { LandingLiType } from "@/data"
 import { motion } from "framer-motion"
-import { type FC } from "react"
-import classes from "./LandingList.module.scss"
+import classes from "./Li.module.scss"
 
 type PropsType = {
 	type: "advs" | "techs"
@@ -12,14 +9,14 @@ type PropsType = {
 	delay: number
 } & LandingLiType
 
-const ListItem: FC<PropsType> = ({
+export default function ListItem({
 	title,
 	description,
 	isRight,
 	type,
 	isInView,
 	delay
-}) => {
+}: PropsType) {
 	const getClassNames = (): string => {
 		let className = `${classes.item}`
 		if (type === "techs") className += ` ${classes.techs}`
@@ -40,5 +37,3 @@ const ListItem: FC<PropsType> = ({
 		</motion.li>
 	)
 }
-
-export default ListItem

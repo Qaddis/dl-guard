@@ -1,13 +1,13 @@
 "use client"
 
 import { Canvas } from "@react-three/fiber"
-import { Suspense, type FC } from "react"
+import { Suspense } from "react"
 import { Model } from "../Lock3D"
-import Button from "../ui/Button"
-import OutlineButton from "../ui/OutlineButton"
+import Button from "../ui/Buttons/Button"
+import OutlineButton from "../ui/Buttons/OutlineButton"
 import classes from "./Landing.module.scss"
 
-const Landing: FC = () => {
+export default function Landing() {
 	return (
 		<section className={classes.landing}>
 			<div className={classes.info}>
@@ -26,6 +26,7 @@ const Landing: FC = () => {
 					<OutlineButton>Скачать</OutlineButton>
 				</div>
 			</div>
+
 			<div className={classes["lock-3d"]}>
 				<Canvas camera={{ position: [0, 1.5, 6], zoom: 2.6 }}>
 					<ambientLight intensity={2} />
@@ -47,5 +48,3 @@ const Landing: FC = () => {
 		</section>
 	)
 }
-
-export default Landing

@@ -1,10 +1,9 @@
 "use client"
 
-import type { FC } from "react"
 import NavLink from "../ui/NavLink"
 import classes from "./AppFooter.module.scss"
 
-const Footer: FC = () => {
+export default function Footer() {
 	return (
 		<footer className={classes.footer}>
 			<div className={`wrapper ${classes.wrapper}`}>
@@ -65,5 +64,3 @@ const Footer: FC = () => {
 		</footer>
 	)
 }
-
-export default Footer

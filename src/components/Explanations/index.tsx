@@ -2,7 +2,6 @@
 
 import type { Transition, Variants } from "framer-motion"
 import { motion, useInView } from "framer-motion"
-import type { FC } from "react"
 import { useRef, useState } from "react"
 import classes from "./Explanations.module.scss"
 
@@ -12,7 +11,7 @@ const enum infEnum {
 	server = 2
 }
 
-const Explanations: FC = () => {
+export default function Explanations() {
 	const explanations: string[] = [
 		`<b>Устройство</b> считывает уникальный идентификатор пропуска и выводит его в серийный порт, где его считывает приложение <b>"DL Guard | PC"</b>`,
 		`<b>Приложение</b> считывает информацию с <b>устройств</b>,
@@ -107,5 +106,3 @@ const Explanations: FC = () => {
 		</section>
 	)
 }
-
-export default Explanations

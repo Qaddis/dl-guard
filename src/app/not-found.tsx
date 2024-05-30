@@ -1,11 +1,10 @@
 "use client"
 
-import Button from "@/components/ui/Button"
-import type { NextPage } from "next"
+import Button from "@/components/ui/Buttons/Button"
 import { useRouter } from "next/navigation"
 import classes from "./NotFound.module.scss"
 
-const NotFoundPage: NextPage = () => {
+export default function NotFoundPage() {
 	const navigation = useRouter()
 
 	const handleClick = () => {
@@ -24,5 +23,3 @@ const NotFoundPage: NextPage = () => {
 		</section>
 	)
 }
-
-export default NotFoundPage

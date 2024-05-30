@@ -2,11 +2,11 @@
 
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import Image from "next/image"
-import { useState, type FC } from "react"
+import { useState } from "react"
 import NavLink from "../ui/NavLink"
 import classes from "./AppHeader.module.scss"
 
-const Header: FC = () => {
+export default function Header() {
 	const [isHidden, setIsHidden] = useState<boolean>(false)
 	const { scrollY } = useScroll()
 
@@ -70,5 +70,3 @@ const Header: FC = () => {
 		</motion.header>
 	)
 }
-
-export default Header
