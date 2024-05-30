@@ -56,11 +56,16 @@
 	}
 
 	.heading {
+		margin-bottom: 5px;
 		font-family: var(--rb-font);
 		font-size: 1.35em;
 
 		span {
 			color: var(--accent);
 		}
+	}
+
+	.description {
+		line-height: 1.1;
 	}
 }

@@ -14,7 +14,7 @@ export default function ListElement({
 	const router = useRouter()
 
 	const handleClick = (): void => {
-		router.push("/product?item=" + title.toLowerCase())
+		router.push("/download/" + title.toLowerCase())
 	}
 
 	return (
