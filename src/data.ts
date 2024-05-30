@@ -67,34 +67,32 @@ export const techs: LandingLiType[] = [
 	}
 ]
 
-export const materials = [
+export type MaterialsLiType = {
+	title: string
+	description: string
+	path?: string
+}
+
+export const mtls: MaterialsLiType[] = [
 	{
 		title: "PC",
 		description:
 			"Приложение для Windows, которое позволит взаимодействовать со считывающими устройствами.",
-		modDesc:
-			"Содержит:<br><i>&quot;DL_Guard.exe&quot;</i> - компьютерное приложение.<br><i>&quot;config.json&quot;</i> - файл, куда сохраняется информация об устройствах и настройки.<hr>Приложение считывает информацию с устройств,<br>делает запрос на сервер и выводит результат.",
-		path: "/dl-guard.zip"
+		path: "/downloads/dl-guard_program.zip"
 	},
 	{
-		title: "Host",
+		title: "Server",
 		description: "Файлы программной части сервера системы.",
-		modDesc:
-			"Содержит:<br><i>&quot;index.js&quot;</i> - файл с готовой логикой сервера на node.js + express.<br><i>&quot;package.json&quot;</i> - файл зависимостей node.js.<br><i>&quot;views/stat.hbs&quot;</i> - шаблон страницы для серверного рендеринга.<br><i>&quot;public/stat.css&quot;</i> - файл стилей для шаблона страницы.<hr>Сервер получает уникальный номер пропуска от приложения &quot;DL Guard | <i>PC</i>&quot;,<br>делает запрос к базе данных, проверяя, есть ли такой в списке разрешенных, и отправляет ответ обратно на устройство.",
-		path: "/server_files.zip"
+		path: "/downloads/dl-guard_server.zip"
 	},
 	{
 		title: "Device",
 		description: "Схемы и скетч считывающего устройства.",
-		modDesc:
-			"Содержит:<br><i>&quot;card-reader.ino&quot;</i> - готовый скетч для считывающего устройства на Arduino.<hr>Устройство считывает уникальный идентификатор пропуска и выводит его в серийный порт, где его считывает приложение &quot;DL Guard | <i>PC</i>&quot;.",
-		path: "/card_reader.zip"
+		path: "/downloads/dl-guard_device.zip"
 	},
 	{
 		title: "Mobile",
 		description:
-			"Приложение для Android, которое позволит пользоваться пропуском с телефона при помощи NFC.",
-		modDesc: "В данный момент ещё находится разработке...",
-		path: ""
+			"Приложение для Android, которое позволит пользоваться пропуском с телефона при помощи NFC."
 	}
 ]

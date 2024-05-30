@@ -2,11 +2,13 @@
 
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import NavLink from "../ui/NavLink"
 import classes from "./AppHeader.module.scss"
 
 export default function Header() {
+	const router = useRouter()
 	const [isHidden, setIsHidden] = useState<boolean>(false)
 	const { scrollY } = useScroll()
 
@@ -14,13 +16,17 @@ export default function Header() {
 		const previously = scrollY.getPrevious()
 
 		if (previously) {
-			if (latest > 100 && latest > previously) {
+			if (latest > 150 && latest > previously) {
 				if (latest - previously > 10) setIsHidden(true)
 			} else {
 				if (previously - latest > 10) setIsHidden(false)
 			}
 		}
 	})
+
+	const handleLogoClick = (): void => {
+		router.push("/")
+	}
 
 	return (
 		<motion.header
@@ -44,12 +50,15 @@ export default function Header() {
 						ease: "easeOut"
 					}}
 					className={classes.logo}
+					onClick={handleLogoClick}
 				>
 					<Image src="/favicon.png" alt="Logo" width={360} height={360} />
 					<span>
 						<em>DL</em> Guard
 					</span>
-					<span className={classes.badge}>2.0</span>
+					<span onClick={e => e.stopPropagation()} className={classes.badge}>
+						2.0
+					</span>
 				</motion.h1>
 
 				<motion.nav

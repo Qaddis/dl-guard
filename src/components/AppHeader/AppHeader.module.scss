@@ -29,6 +29,12 @@
 	color: var(--blue);
 	cursor: pointer;
 
+	&:hover {
+		img {
+			filter: drop-shadow(0 0 10px var(--red));
+		}
+	}
+
 	.badge {
 		position: absolute;
 		right: -30px;
@@ -37,6 +43,7 @@
 		font-family: var(--rb-font);
 		font-size: 0.35em;
 		color: var(--red);
+		cursor: default;
 	}
 
 	em {
@@ -47,6 +54,7 @@
 	img {
 		width: 60px;
 		height: 60px;
+		transition: filter 0.2s;
 	}
 }
 

@@ -1,0 +1,50 @@
+.download {
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	hr {
+		margin: 25px 0 15px;
+	}
+}
+
+.description {
+	margin-top: 5px;
+	text-align: center;
+	line-height: 1.1;
+
+	span {
+		color: var(--accent);
+	}
+}
+
+.heading {
+	font-family: var(--rb-font);
+	font-size: 1.5em;
+	color: var(--accent);
+	font-weight: bold;
+}
+
+.materials {
+	width: 80%;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+.sources {
+	margin-top: 5px;
+	font-size: 1.1em;
+
+	a {
+		color: var(--accent);
+		text-decoration: underline;
+		transition: text-shadow 0.35s;
+
+		&:hover {
+			text-shadow: 0 0 10px var(--accent);
+		}
+	}
+}

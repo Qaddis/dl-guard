@@ -18,7 +18,7 @@ export default function ListItem({
 	delay
 }: PropsType) {
 	const getClassNames = (): string => {
-		let className = `${classes.item}`
+		let className = `${classes["landing-li"]}`
 		if (type === "techs") className += ` ${classes.techs}`
 		if (isRight) className += ` ${classes.right}`
 

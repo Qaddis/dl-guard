@@ -1,4 +1,4 @@
-.item {
+.landing-li {
 	width: 100%;
 	padding: 3px 15px;
 	display: flex;
@@ -35,5 +35,32 @@
 
 	&.techs {
 		border-color: var(--blue) !important;
+	}
+}
+
+.materials-li {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid var(--add);
+	border-radius: 10px;
+
+	display: flex;
+	justify-content: space-between;
+	column-gap: 10%;
+
+	div:nth-child(2) {
+		width: 130px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.heading {
+		font-family: var(--rb-font);
+		font-size: 1.35em;
+
+		span {
+			color: var(--accent);
+		}
 	}
 }
