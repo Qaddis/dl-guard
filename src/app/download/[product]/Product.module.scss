@@ -32,8 +32,17 @@
 	}
 }
 
+.techs {
+	font-size: 1.1em;
+	list-style-position: inside;
+
+	li::marker {
+		color: var(--accent);
+	}
+}
+
 .buttons {
-	margin-top: 25px;
+	margin-top: 35px;
 	display: flex;
 	column-gap: 25px;
 }

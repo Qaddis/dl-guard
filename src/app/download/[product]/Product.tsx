@@ -10,7 +10,8 @@ export default function Product({
 	title,
 	description,
 	path,
-	howWork
+	howWork,
+	techs
 }: MaterialsLiType) {
 	const navigation = useRouter()
 
@@ -37,6 +38,13 @@ export default function Product({
 							className={classes["how-work"]}
 							dangerouslySetInnerHTML={{ __html: howWork }}
 						/>
+
+						<h3 className={classes.heading}>Технологии</h3>
+						<ol className={classes.techs}>
+							{techs.map(item => (
+								<li>{item}</li>
+							))}
+						</ol>
 
 						<div className={classes.buttons}>
 							{path ? (

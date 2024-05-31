@@ -5,13 +5,15 @@ interface IProps extends PropsWithChildren {
 	styles?: CSSProperties
 	onClick?: Function
 	disabled?: boolean
+	title?: string
 }
 
 export default function OutlineButton({
 	children,
 	styles,
 	onClick,
-	disabled
+	disabled,
+	title
 }: IProps) {
 	const handleClick = (): void => {
 		if (onClick) disabled ? null : onClick()
@@ -24,7 +26,12 @@ export default function OutlineButton({
 	}
 
 	return (
-		<button onClick={handleClick} style={styles} className={getClassNames()}>
+		<button
+			title={disabled ? "Недоступно" : title}
+			onClick={handleClick}
+			style={styles}
+			className={getClassNames()}
+		>
 			{children}
 		</button>
 	)

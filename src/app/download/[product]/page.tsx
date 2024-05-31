@@ -9,5 +9,13 @@ export default function ProductPage({
 	const data = mtls.find(item => item.title.toLowerCase() === params.product)
 
 	if (data) return <Product {...data} />
-	else return <Product title="none" description="none" howWork="none" />
+	else
+		return (
+			<Product
+				title="none"
+				description="none"
+				howWork="none"
+				techs={["none"]}
+			/>
+		)
 }

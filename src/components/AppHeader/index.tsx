@@ -42,6 +42,7 @@ export default function Header() {
 		>
 			<div className={`wrapper ${classes.wrapper}`}>
 				<motion.h1
+					title="На главную"
 					initial={false}
 					variants={{ show: { x: 0 }, hidden: { x: "-200%" } }}
 					transition={{
