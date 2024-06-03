@@ -1,0 +1,48 @@
+.modal {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 12;
+	background-color: rgba($color: #000, $alpha: 0.5);
+
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.modal-content {
+	width: 50%;
+	height: 100%;
+	background-color: var(--main);
+	color: var(--text);
+	border-left: 3px solid var(--add);
+
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 25px;
+}
+
+.heading {
+	font-family: var(--rb-font);
+	font-size: 1.8em;
+	font-weight: bold;
+	color: var(--accent);
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 10px;
+	line-height: 1.3;
+}

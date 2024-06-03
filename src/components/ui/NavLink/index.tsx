@@ -2,16 +2,16 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import type { CSSProperties, FC, ReactNode } from "react"
+import type { CSSProperties, MouseEventHandler, PropsWithChildren } from "react"
 import classes from "./NavLink.module.scss"
 
-interface IProps {
-	children: ReactNode
+interface IProps extends PropsWithChildren {
 	to: string
 	styles?: CSSProperties
+	onClick?: MouseEventHandler<HTMLAnchorElement>
 }
 
-const NavLink: FC<IProps> = ({ children, to, styles }) => {
+export default function NavLink({ children, to, styles, onClick }: IProps) {
 	const path = usePathname()
 
 	return (
@@ -20,11 +20,10 @@ const NavLink: FC<IProps> = ({ children, to, styles }) => {
 			className={
 				path === to ? `${classes.link} ${classes.active}` : classes.link
 			}
+			onClick={onClick}
 			href={to}
 		>
 			{children}
 		</Link>
 	)
 }
-
-export default NavLink

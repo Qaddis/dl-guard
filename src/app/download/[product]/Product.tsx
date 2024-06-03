@@ -3,6 +3,7 @@
 import Button from "@/components/ui/Buttons/Button"
 import OutlineButton from "@/components/ui/Buttons/OutlineButton"
 import type { MaterialsLiType } from "@/data"
+import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import classes from "./Product.module.scss"
 
@@ -23,7 +24,12 @@ export default function Product({
 
 	return (
 		<section>
-			<div className={`wrapper ${classes.product}`}>
+			<motion.div
+				initial={{ y: "10%" }}
+				animate={{ y: 0 }}
+				transition={{ delay: 0.2, duration: 0.35 }}
+				className={`wrapper ${classes.product}`}
+			>
 				{title !== "none" ? (
 					<>
 						<h2 className="heading">
@@ -60,7 +66,7 @@ export default function Product({
 				) : (
 					<h2 className="heading">None</h2>
 				)}
-			</div>
+			</motion.div>
 		</section>
 	)
 }

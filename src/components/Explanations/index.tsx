@@ -45,7 +45,7 @@ export default function Explanations() {
 	}
 
 	return (
-		<section className={classes.information}>
+		<section id="about" className={classes.information}>
 			<h2 className={classes.heading}>
 				Как устроена система <span>DL Guard</span>?
 			</h2>

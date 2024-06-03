@@ -1,5 +1,7 @@
 import Footer from "@/components/AppFooter"
 import Header from "@/components/AppHeader"
+import Modal from "@/components/Modal"
+import StoreProvider from "@/redux/StoreProvider"
 import type { Metadata } from "next"
 import { Dancing_Script, Nunito, Roboto_Slab } from "next/font/google"
 import "./globals.scss"
@@ -37,11 +39,15 @@ export default function RootLayout({
 			<body
 				className={`${nunito.variable} ${roboto.variable} ${dancing.variable}`}
 			>
-				<Header />
+				<StoreProvider>
+					<Header />
 
-				<main className="main">{children}</main>
+					<main className="main">{children}</main>
 
-				<Footer />
+					<Modal />
+
+					<Footer />
+				</StoreProvider>
 			</body>
 		</html>
 	)

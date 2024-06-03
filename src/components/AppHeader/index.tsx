@@ -1,5 +1,6 @@
 "use client"
 
+import { useActions } from "@/redux/hooks"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
@@ -8,9 +9,10 @@ import NavLink from "../ui/NavLink"
 import classes from "./AppHeader.module.scss"
 
 export default function Header() {
-	const router = useRouter()
 	const [isHidden, setIsHidden] = useState<boolean>(false)
 	const { scrollY } = useScroll()
+	const navigation = useRouter()
+	const { toggleModal } = useActions()
 
 	useMotionValueEvent(scrollY, "change", latest => {
 		const previously = scrollY.getPrevious()
@@ -25,7 +27,7 @@ export default function Header() {
 	})
 
 	const handleLogoClick = (): void => {
-		router.push("/")
+		navigation.push("/")
 	}
 
 	return (
@@ -59,6 +61,15 @@ export default function Header() {
 					<NavLink to="/download">Скачать</NavLink>
 					<NavLink to="/about">О проекте</NavLink>
 				</nav>
+
+				<button className={classes.burger} onClick={() => toggleModal()}>
+					<Image
+						src="/burger.png"
+						width={256}
+						height={256}
+						alt="Open Navigation"
+					/>
+				</button>
 			</div>
 		</motion.header>
 	)

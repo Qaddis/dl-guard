@@ -1,6 +1,7 @@
 "use client"
 
 import { Canvas } from "@react-three/fiber"
+import { useRouter } from "next/navigation"
 import { Suspense } from "react"
 import { Model } from "../Lock3D"
 import Button from "../ui/Buttons/Button"
@@ -8,6 +9,13 @@ import OutlineButton from "../ui/Buttons/OutlineButton"
 import classes from "./Landing.module.scss"
 
 export default function Landing() {
+	const navigation = useRouter()
+
+	const scrollToAbout = (): void => {
+		const content = document.getElementById("about")
+		if (content) content.scrollIntoView({ behavior: "smooth", block: "start" })
+	}
+
 	return (
 		<section className={classes.landing}>
 			<div className={classes.info}>
@@ -21,9 +29,11 @@ export default function Landing() {
 					дальнейшей доработки.
 				</p>
 				<div className={classes.buttons}>
-					<Button>Узнать больше</Button>
+					<Button onClick={scrollToAbout}>Узнать больше</Button>
 					<span>или</span>
-					<OutlineButton>Скачать</OutlineButton>
+					<OutlineButton onClick={() => navigation.push("/download")}>
+						Скачать
+					</OutlineButton>
 				</div>
 			</div>
 
