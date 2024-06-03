@@ -1,16 +1,22 @@
 "use client"
 
 import type { MaterialsLiType } from "@/data"
+import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import Button from "../Buttons/Button"
 import OutlineButton from "../Buttons/OutlineButton"
 import classes from "./Li.module.scss"
 
+interface IProps extends MaterialsLiType {
+	delay: number
+}
+
 export default function ListElement({
 	title,
 	description,
-	path
-}: MaterialsLiType) {
+	path,
+	delay
+}: IProps) {
 	const router = useRouter()
 
 	const handleClick = (): void => {
@@ -18,7 +24,12 @@ export default function ListElement({
 	}
 
 	return (
-		<li className={classes["materials-li"]}>
+		<motion.li
+			initial={{ rotateX: 90 }}
+			animate={{ rotateX: 0 }}
+			transition={{ duration: 0.35, delay: delay }}
+			className={classes["materials-li"]}
+		>
 			<div>
 				<h3 className={classes.heading}>
 					DL Guard | <span>{title}</span>
@@ -37,6 +48,6 @@ export default function ListElement({
 					</Button>
 				)}
 			</div>
-		</li>
+		</motion.li>
 	)
 }

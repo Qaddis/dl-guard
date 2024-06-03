@@ -20,8 +20,12 @@ export default function Download() {
 
 				<h3 className={classes.heading}>Готовая система</h3>
 				<ul className={classes.materials}>
-					{mtls.map(item => (
-						<ListElement key={item.title} {...item} />
+					{mtls.map((item, index) => (
+						<ListElement
+							key={item.title}
+							delay={(index + 1) / 5 + 0.3}
+							{...item}
+						/>
 					))}
 				</ul>
 
