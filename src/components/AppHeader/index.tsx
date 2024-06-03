@@ -34,22 +34,14 @@ export default function Header() {
 			animate={isHidden ? "hidden" : "show"}
 			variants={{ show: { y: 0 }, hidden: { y: "-100%" } }}
 			transition={{
-				delay: isHidden ? 0.25 : 0,
-				duration: 0.35,
+				duration: 0.25,
 				ease: "easeOut"
 			}}
 			className={classes.header}
 		>
 			<div className={`wrapper ${classes.wrapper}`}>
-				<motion.h1
+				<h1
 					title="На главную"
-					initial={false}
-					variants={{ show: { x: 0 }, hidden: { x: "-200%" } }}
-					transition={{
-						delay: isHidden ? 0 : 0.35,
-						duration: 0.25,
-						ease: "easeOut"
-					}}
 					className={classes.logo}
 					onClick={handleLogoClick}
 				>
@@ -60,22 +52,13 @@ export default function Header() {
 					<span onClick={e => e.stopPropagation()} className={classes.badge}>
 						2.0
 					</span>
-				</motion.h1>
+				</h1>
 
-				<motion.nav
-					initial={false}
-					variants={{ show: { x: 0 }, hidden: { x: "200%" } }}
-					transition={{
-						delay: isHidden ? 0 : 0.35,
-						duration: 0.25,
-						ease: "easeOut"
-					}}
-					className={classes.nav}
-				>
+				<nav className={classes.nav}>
 					<NavLink to="/">Главная</NavLink>
 					<NavLink to="/download">Скачать</NavLink>
 					<NavLink to="/about">О проекте</NavLink>
-				</motion.nav>
+				</nav>
 			</div>
 		</motion.header>
 	)

@@ -38,6 +38,8 @@
 
 	li::marker {
 		color: var(--accent);
+		font-family: var(--rb-font);
+		font-weight: bold;
 	}
 }
 
