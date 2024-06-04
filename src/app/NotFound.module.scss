@@ -1,5 +1,6 @@
 .wrapper {
-	height: calc(100vh - 92px - 263px);
+	height: calc(100vh - 263px - 92px);
+	margin-top: 92.5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -29,4 +30,31 @@
 	100% {
 		text-shadow: none;
 	}
+}
+
+// Laptop
+@media (max-width: 1140px) {
+}
+
+// Small laptop
+@media (max-width: 1024px) {
+}
+
+// Tablet
+@media (max-width: 768px) {
+}
+
+// Large mobile
+@media (max-width: 425px) {
+	.heading {
+		font-size: 1.8em;
+	}
+}
+
+// Average mobile
+@media (max-width: 375px) {
+}
+
+// Small mobile
+@media (max-width: 320px) {
 }

@@ -18,7 +18,15 @@ export default function NotFoundPage() {
 					Page <span>Not Found</span>
 				</h2>
 
-				<Button onClick={handleClick}>На главную</Button>
+				<Button
+					styles={{
+						padding: "10px 25px",
+						fontSize: "1.15em"
+					}}
+					onClick={handleClick}
+				>
+					На главную
+				</Button>
 			</div>
 		</section>
 	)
