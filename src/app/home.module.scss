@@ -21,3 +21,13 @@
 		color: var(--blue) !important;
 	}
 }
+
+// Tablet
+@media (max-width: 768px) {
+	.advantages,
+	.technologies {
+		ul {
+			row-gap: 25px;
+		}
+	}
+}

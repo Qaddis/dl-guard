@@ -31,7 +31,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	overflow-x: hidden;
 }
 
 .wrapper {
@@ -44,6 +43,7 @@ body {
 	padding: 0 25px;
 	width: 100%;
 	min-height: calc(100vh - 92px - 263px);
+	overflow-x: hidden;
 
 	hr {
 		border: none;
@@ -57,4 +57,31 @@ body {
 		color: var(--accent);
 		font-weight: bold;
 	}
+}
+
+// Laptop
+@media (max-width: 1140px) {
+}
+
+// Small laptop
+@media (max-width: 1024px) {
+	.heading {
+		font-size: 1.6em !important;
+	}
+}
+
+// Tablet
+@media (max-width: 768px) {
+}
+
+// Large mobile
+@media (max-width: 425px) {
+}
+
+// Average mobile
+@media (max-width: 375px) {
+}
+
+// Small mobile
+@media (max-width: 320px) {
 }

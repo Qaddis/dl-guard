@@ -2,7 +2,7 @@
 
 import type { Transition, Variants } from "framer-motion"
 import { motion, useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import classes from "./Explanations.module.scss"
 
 const enum infEnum {
@@ -32,7 +32,7 @@ export default function Explanations() {
 
 	const variants: Variants = {
 		hidden: {
-			y: "150%"
+			y: "100%"
 		},
 		show: {
 			y: 0
@@ -44,12 +44,22 @@ export default function Explanations() {
 		ease: "easeInOut"
 	}
 
+	const [helper, setHelper] = useState<string>()
+
+	useEffect(() => {
+		if (window.innerWidth > 768) {
+			setHelper("Наведите указатель, чтобы узнать подробнее")
+		} else {
+			setHelper("Нажмите на элемент, чтобы узнать подробнее")
+		}
+	})
+
 	return (
 		<section id="about" className={classes.information}>
 			<h2 className={classes.heading}>
 				Как устроена система <span>DL Guard</span>?
 			</h2>
-			<p>Наведите указатель, чтобы узнать подробнее</p>
+			<p>{helper}</p>
 
 			<motion.div
 				initial={false}

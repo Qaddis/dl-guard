@@ -5,15 +5,27 @@ import Landing from "@/components/Landing"
 import ListItem from "@/components/ui/Li/LandingLi"
 import { advs, techs } from "@/data"
 import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import classes from "./Home.module.scss"
 
 export default function Home() {
+	const [amount, setAmount] = useState<number>(0.4)
+
 	const advsRef = useRef<HTMLDivElement>(null)
 	const techsRef = useRef<HTMLDivElement>(null)
 
-	const advsInView = useInView(advsRef, { amount: 0.4, once: true })
-	const techsInView = useInView(techsRef, { amount: 0.4, once: true })
+	const advsInView = useInView(advsRef, {
+		amount: amount,
+		once: true
+	})
+	const techsInView = useInView(techsRef, {
+		amount: amount,
+		once: true
+	})
+
+	useEffect(() => {
+		if (window.innerWidth < 375) setAmount(0.3)
+	})
 
 	return (
 		<div className="wrapper">

@@ -46,3 +46,29 @@
 	display: flex;
 	column-gap: 30px;
 }
+
+// Average mobile
+@media (max-width: 375px) {
+	.copyright {
+		text-align: center;
+		line-height: 1.05;
+	}
+
+	.nav {
+		column-gap: 15px;
+
+		a {
+			font-size: 1em;
+		}
+	}
+}
+
+// Small mobile
+@media (max-width: 320px) {
+	.nav {
+		column-gap: 0;
+		row-gap: 10px;
+		flex-direction: column;
+		align-items: center;
+	}
+}

@@ -46,3 +46,10 @@
 	row-gap: 10px;
 	line-height: 1.3;
 }
+
+// Small tablet
+@media (max-width: 475px) {
+	.modal-content {
+		width: 70%;
+	}
+}

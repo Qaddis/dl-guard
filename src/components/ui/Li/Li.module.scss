@@ -28,6 +28,10 @@
 		border-right: 5px solid var(--red);
 		align-items: flex-end;
 
+		h3 {
+			text-align: right;
+		}
+
 		p {
 			text-align: right;
 		}
@@ -67,5 +71,37 @@
 
 	.description {
 		line-height: 1.1;
+	}
+}
+
+// Small laptop
+@media (max-width: 1024px) {
+	.landing-li {
+		p {
+			max-width: 80%;
+		}
+	}
+}
+
+// Tablet
+@media (max-width: 768px) {
+	.landing-li {
+		h3 {
+			line-height: 1.05;
+		}
+
+		p {
+			max-width: 100%;
+		}
+	}
+}
+
+// Large mobile
+@media (max-width: 425px) {
+	.landing-li {
+		p {
+			margin-top: 3px;
+			line-height: 1;
+		}
 	}
 }

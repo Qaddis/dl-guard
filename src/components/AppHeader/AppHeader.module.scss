@@ -5,7 +5,7 @@
 	background-color: var(--dark);
 	border-bottom: 3px solid var(--add);
 
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
@@ -67,4 +67,51 @@
 	width: 60px;
 	height: auto;
 	display: none;
+}
+
+// Tablet
+@media (max-width: 768px) {
+	.nav {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+	}
+}
+
+@media (max-width: 600px) {
+	.header {
+		height: 92.5px;
+	}
+
+	.logo {
+		column-gap: 10px;
+		font-size: 1.8em;
+
+		img {
+			width: 50px;
+			height: 50px;
+		}
+
+		.badge {
+			right: -23px;
+		}
+	}
+}
+
+// Small mobile
+@media (max-width: 320px) {
+	.burger {
+		padding: 10px;
+
+		image {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.badge {
+		display: none;
+	}
 }

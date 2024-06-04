@@ -28,7 +28,7 @@ export default function ListItem({
 	return (
 		<motion.li
 			initial={false}
-			animate={{ x: isInView ? 0 : isRight ? "100%" : "-100%" }}
+			animate={{ x: isInView ? 0 : isRight ? "150%" : "-150%" }}
 			transition={{ duration: 0.25, ease: "easeInOut", delay: delay }}
 			className={getClassNames()}
 		>
