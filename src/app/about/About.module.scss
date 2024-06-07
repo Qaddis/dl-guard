@@ -57,6 +57,7 @@
 
 	li::marker {
 		color: var(--accent);
+		display: block;
 		font-size: 1.25em;
 	}
 }
@@ -83,5 +84,45 @@
 		&:nth-child(3) {
 			font-family: var(--ds-font);
 		}
+	}
+}
+
+// Tablet
+@media (max-width: 768px) {
+	.credits {
+		row-gap: 8px;
+
+		li {
+			text-align: center;
+			line-height: 1.1;
+
+			i {
+				text-wrap: nowrap;
+			}
+		}
+	}
+}
+
+// Large mobile
+@media (max-width: 425px) {
+	.about {
+		padding: 25px 0;
+
+		h3 {
+			font-size: 1.35em;
+		}
+
+		.text,
+		.links,
+		.credits {
+			font-size: 16px;
+		}
+	}
+}
+
+// Average mobile
+@media (max-width: 375px) {
+	.links {
+		margin-left: 20px;
 	}
 }

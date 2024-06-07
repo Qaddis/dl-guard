@@ -49,3 +49,48 @@
 	display: flex;
 	column-gap: 25px;
 }
+
+// Small laptop
+@media (max-width: 1024px) {
+	.description {
+		text-align: center;
+	}
+}
+
+// Tablet
+@media (max-width: 768px) {
+	.product {
+		padding: 25px 0;
+	}
+}
+
+// Large mobile
+@media (max-width: 425px) {
+	.heading {
+		font-size: 1.35em;
+	}
+
+	.buttons {
+		margin-top: 20px;
+		flex-direction: column;
+		width: 80%;
+		column-gap: 0;
+		row-gap: 15px;
+
+		button {
+			width: 100% !important;
+		}
+	}
+}
+
+// Average mobile
+@media (max-width: 375px) {
+	.description,
+	.how-work {
+		font-size: 16px;
+	}
+
+	.techs {
+		font-size: 1em;
+	}
+}
