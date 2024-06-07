@@ -23,7 +23,7 @@ export default function Product({
 	}
 
 	return (
-		<section>
+		<section style={{ overflowY: "hidden" }}>
 			<motion.div
 				initial={{ y: "10%" }}
 				animate={{ y: 0 }}

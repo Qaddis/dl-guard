@@ -2,7 +2,7 @@
 
 import { useGLTF } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-import { useRef } from "react"
+import { RefObject } from "react"
 import type { Group, Mesh, MeshStandardMaterial } from "three"
 import type { GLTF } from "three-stdlib"
 
@@ -22,12 +22,16 @@ type GLTFResult = GLTF & {
 	}
 }
 
-export function Model(props: JSX.IntrinsicElements["group"]) {
-	const group = useRef<Group>(null)
+export function Model({
+	group,
+	...props
+}: { group: RefObject<Group> } & JSX.IntrinsicElements["group"]) {
 	const { nodes, materials } = useGLTF("/lock.glb") as GLTFResult
 
 	useFrame(() => {
-		if (group.current) group.current.rotation.y += 0.02
+		const { clientWidth } = document.documentElement
+		if (group.current && clientWidth <= 768)
+			group.current.rotation.y += Math.PI / 90
 	})
 
 	return (
