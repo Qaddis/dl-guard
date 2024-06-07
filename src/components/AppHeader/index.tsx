@@ -18,11 +18,8 @@ export default function Header() {
 		const previously = scrollY.getPrevious()
 
 		if (previously) {
-			if (latest > 150 && latest > previously) {
-				if (latest - previously > 10) setIsHidden(true)
-			} else {
-				if (previously - latest > 10) setIsHidden(false)
-			}
+			if (latest > 150 && latest > previously) setIsHidden(true)
+			else setIsHidden(false)
 		}
 	})
 

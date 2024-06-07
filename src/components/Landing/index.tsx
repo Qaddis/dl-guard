@@ -40,16 +40,8 @@ export default function Landing() {
 			<div className={classes["lock-3d"]}>
 				<Canvas camera={{ position: [0, 1.5, 6], zoom: 2.6 }}>
 					<ambientLight intensity={2} />
-					<pointLight
-						position={[0, -0.5, 6]}
-						intensity={Math.PI * 2}
-						castShadow
-					/>
-					<directionalLight
-						position={[0, 3, 3]}
-						intensity={Math.PI}
-						castShadow
-					/>
+					<pointLight position={[0, -0.5, 6]} intensity={8} castShadow />
+					<directionalLight position={[0, 3, 3]} intensity={3.5} castShadow />
 					<Suspense fallback={null}>
 						<Model position={[0, -0.5, 0]} />
 					</Suspense>

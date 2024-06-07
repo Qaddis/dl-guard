@@ -55,12 +55,14 @@
 @media (max-width: 1024px) {
 	.heading {
 		font-size: 1.8em !important;
-		text-align: center;
 	}
 
 	.description {
 		font-size: 1em !important;
-		text-align: center;
+	}
+
+	.info {
+		max-width: 65%;
 	}
 }
 

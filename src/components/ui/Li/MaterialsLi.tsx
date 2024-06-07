@@ -32,7 +32,7 @@ export default function ListElement({
 		>
 			<div>
 				<h3 className={classes.heading}>
-					DL Guard | <span>{title}</span>
+					DL Guard<span>{title}</span>
 				</h3>
 				<p className={classes.description}>{description}</p>
 			</div>
@@ -40,12 +40,10 @@ export default function ListElement({
 				<OutlineButton onClick={handleClick}>Подробнее</OutlineButton>
 				{path ? (
 					<a href={path} download>
-						<Button styles={{ width: "100%" }}>Скачать</Button>
+						<Button>Скачать</Button>
 					</a>
 				) : (
-					<Button styles={{ width: "100%" }} disabled>
-						Скачать
-					</Button>
+					<Button disabled>Скачать</Button>
 				)}
 			</div>
 		</motion.li>

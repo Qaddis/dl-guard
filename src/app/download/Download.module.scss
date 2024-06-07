@@ -49,3 +49,19 @@
 		}
 	}
 }
+
+// Large mobile
+@media (max-width: 425px) {
+	.download {
+		padding: 25px 0;
+	}
+
+	.heading {
+		font-size: 1.35em;
+	}
+
+	.sources {
+		font-size: 1em;
+		text-align: center;
+	}
+}

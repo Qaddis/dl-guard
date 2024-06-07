@@ -48,7 +48,7 @@ export default function Product({
 						<h3 className={classes.heading}>Технологии</h3>
 						<ol className={classes.techs}>
 							{techs.map(item => (
-								<li>{item}</li>
+								<li key={item}>{item}</li>
 							))}
 						</ol>
 
