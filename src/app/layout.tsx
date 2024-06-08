@@ -8,8 +8,8 @@ import "./globals.scss"
 
 const nunito = Nunito({
 	weight: ["400", "700"],
-	variable: "--nu-font",
-	subsets: ["cyrillic"]
+	subsets: ["cyrillic"],
+	variable: "--nu-font"
 })
 
 const roboto = Roboto_Slab({
@@ -20,13 +20,22 @@ const roboto = Roboto_Slab({
 
 const dancing = Dancing_Script({
 	weight: "400",
-	variable: "--ds-font",
-	subsets: ["latin"]
+	subsets: ["latin"],
+	variable: "--ds-font"
 })
 
 export const metadata: Metadata = {
-	title: "DL Guard",
-	description: "By Qaddis with love =)"
+	title: {
+		default: "DL Guard - система электронных пропусков",
+		template: "%s | DL Guard"
+	},
+	keywords: [
+		"DL",
+		"DL Guard",
+		"Система электронных пропусков",
+		"Qaddis",
+		"Электронные пропуска"
+	]
 }
 
 export default function RootLayout({

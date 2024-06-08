@@ -5,6 +5,7 @@ import OutlineButton from "@/components/ui/Buttons/OutlineButton"
 import type { MaterialsLiType } from "@/data"
 import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
+import { useEffect } from "react"
 import classes from "./Product.module.scss"
 
 export default function Product({
@@ -21,6 +22,10 @@ export default function Product({
 	const goBack = (): void => {
 		navigation.push("/download")
 	}
+
+	useEffect(() => {
+		document.title = `DL Guard | ${title}`
+	})
 
 	return (
 		<section style={{ overflowY: "hidden" }}>

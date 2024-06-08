@@ -2,7 +2,7 @@
 
 import { useGLTF } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-import { RefObject } from "react"
+import type { RefObject } from "react"
 import type { Group, Mesh, MeshStandardMaterial } from "three"
 import type { GLTF } from "three-stdlib"
 

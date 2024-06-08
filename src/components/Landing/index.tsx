@@ -32,7 +32,7 @@ export default function Landing() {
 				const x: number = (cursorPos.current.x / clientWidth) * 2 - 1
 				const y: number = -(cursorPos.current.y / clientHeight) * 2 + 1
 
-				group.current.rotation.x = y
+				group.current.rotation.x = -y
 				group.current.rotation.y = x
 			}
 		}
