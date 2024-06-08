@@ -6,6 +6,7 @@ interface IProps extends PropsWithChildren {
 	onClick?: Function
 	disabled?: boolean
 	title?: string
+	download?: string
 }
 
 export default function Button({
@@ -13,10 +14,25 @@ export default function Button({
 	styles,
 	onClick,
 	disabled,
-	title
+	title,
+	download
 }: IProps) {
 	const handleClick = (): void => {
-		if (onClick) disabled ? null : onClick()
+		if (!disabled) {
+			if (download) {
+				const link = document.createElement("a")
+
+				link.href = download
+				link.style.display = "none"
+
+				document.body.appendChild(link)
+				link.click()
+
+				document.body.removeChild(link)
+			} else if (onClick) {
+				onClick()
+			}
+		}
 	}
 
 	const getClassNames = (): string => {

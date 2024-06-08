@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 		title: "DL Guard - система электронных пропусков",
 		description:
 			"DL Guard - система электронных пропусков с открытым исходным кодом и возможность дальнейшей доработки",
-		url: ""
+		url: "https://dl-guard.vercel.app"
 	}
 }
 

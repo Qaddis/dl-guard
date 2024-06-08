@@ -11,8 +11,8 @@ export default function Footer() {
 					<li>
 						<a href="https://vk.com/qaddis" target="_blank">
 							<svg
-								data-name="Layer 1"
-								id="Layer_1"
+								data-name="Svg 1"
+								id="svg_1"
 								viewBox="0 0 512 512"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -24,8 +24,8 @@ export default function Footer() {
 					<li>
 						<a href="https://t.me/qaddis" target="_blank">
 							<svg
-								data-name="Layer 1"
-								id="Layer_1"
+								data-name="Svg 2"
+								id="svg_2"
 								viewBox="0 0 512 512"
 								xmlns="http://www.w3.org/2000/svg"
 							>
@@ -39,7 +39,7 @@ export default function Footer() {
 							<svg
 								style={{ width: 82, height: 82 }}
 								height="512px"
-								id="Layer_1"
+								id="svg_3"
 								version="1.1"
 								viewBox="0 0 512 512"
 								width="512px"

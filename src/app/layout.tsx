@@ -25,6 +25,7 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://dl-guard.vercel.app"),
 	title: {
 		default: "DL Guard - система электронных пропусков",
 		template: "%s | DL Guard"

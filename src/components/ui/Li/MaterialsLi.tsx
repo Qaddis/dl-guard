@@ -39,9 +39,7 @@ export default function ListElement({
 			<div>
 				<OutlineButton onClick={handleClick}>Подробнее</OutlineButton>
 				{path ? (
-					<a href={path} download>
-						<Button>Скачать</Button>
-					</a>
+					<Button download={path}>Скачать</Button>
 				) : (
 					<Button disabled>Скачать</Button>
 				)}

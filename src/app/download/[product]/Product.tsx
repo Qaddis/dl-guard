@@ -24,7 +24,7 @@ export default function Product({
 	}
 
 	useEffect(() => {
-		document.title = `DL Guard | ${title}`
+		document.title = `${title} | DL Guard`
 	})
 
 	return (
@@ -59,9 +59,7 @@ export default function Product({
 
 						<div className={classes.buttons}>
 							{path ? (
-								<a href={path} download>
-									<Button>Скачать</Button>
-								</a>
+								<Button download={path}>Скачать</Button>
 							) : (
 								<Button disabled>Скачать</Button>
 							)}

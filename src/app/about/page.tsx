@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 		images: "./og-image.png",
 		title: "Узнать больше о DL Guard",
 		description: "Узнать больше о DL Guard - системе электронных пропусков",
-		url: ""
+		url: "https://dl-guard.vercel.app/about"
 	}
 }
 

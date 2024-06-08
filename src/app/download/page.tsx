@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 		title: "Скачать готовую систему или исходники DL Guard",
 		description:
 			"Материалы DL Guard для скачивания. Готовая система, исходники",
-		url: ""
+		url: "https://dl-guard.vercel.app/download"
 	}
 }
 
