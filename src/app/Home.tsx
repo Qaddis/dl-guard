@@ -6,7 +6,7 @@ import ListItem from "@/components/ui/Li/LandingLi"
 import { advs, techs } from "@/data"
 import { useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import classes from "./Home.module.scss"
+import styles from "./Home.module.scss"
 
 export default function Home() {
 	const [amount, setAmount] = useState<number>(0.4)
@@ -37,10 +37,10 @@ export default function Home() {
 
 			<hr />
 
-			<section ref={advsRef} className={classes.advantages}>
+			<section ref={advsRef} className={styles.advantages}>
 				<h2 className="heading">Преимущества</h2>
 
-				<ul className={classes.list}>
+				<ul className={styles.list}>
 					{advs.map((item, index) => (
 						<ListItem
 							key={item.title}
@@ -57,10 +57,10 @@ export default function Home() {
 
 			<hr />
 
-			<section ref={techsRef} className={classes.technologies}>
+			<section ref={techsRef} className={styles.technologies}>
 				<h2 className="heading">Технологии</h2>
 
-				<ul className={classes.list}>
+				<ul className={styles.list}>
 					{techs.map((item, index) => (
 						<ListItem
 							key={item.title}
