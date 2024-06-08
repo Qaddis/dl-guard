@@ -7,7 +7,12 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		siteName: "DL Guard",
-		images: "./og-image.png",
+		images: {
+			url: "https://dl-guard.vercel.app/og-image.png",
+			width: "1200",
+			height: "630",
+			alt: "DL Guard"
+		},
 		title: "Скачать готовую систему или исходники DL Guard",
 		description:
 			"Материалы DL Guard для скачивания. Готовая система, исходники",
