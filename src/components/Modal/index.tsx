@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import { MouseEvent, useEffect, useState } from "react"
 import NavLink from "../ui/NavLink"
-import classes from "./Modal.module.scss"
+import classes from "./modal.module.scss"
 
 export default function Modal() {
 	const modalActive: boolean = useAppSelector(

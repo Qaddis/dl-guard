@@ -3,7 +3,7 @@
 import type { Transition, Variants } from "framer-motion"
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import classes from "./Explanations.module.scss"
+import classes from "./explanations.module.scss"
 
 const enum infEnum {
 	device = 0,

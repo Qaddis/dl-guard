@@ -6,7 +6,7 @@ import type { MaterialsLiType } from "@/data"
 import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import classes from "./Product.module.scss"
+import classes from "./product.module.scss"
 
 export default function Product({
 	title,

@@ -8,7 +8,7 @@ import type { Group } from "three"
 import { Model } from "../Lock3D"
 import Button from "../ui/Buttons/Button"
 import OutlineButton from "../ui/Buttons/OutlineButton"
-import classes from "./Landing.module.scss"
+import classes from "./landing.module.scss"
 
 export default function Landing() {
 	const navigation = useRouter()

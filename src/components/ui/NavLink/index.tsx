@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import type { CSSProperties, MouseEventHandler, PropsWithChildren } from "react"
-import classes from "./NavLink.module.scss"
+import classes from "./nav-link.module.scss"
 
 interface IProps extends PropsWithChildren {
 	to: string

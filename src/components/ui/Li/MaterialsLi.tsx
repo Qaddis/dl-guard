@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import Button from "../Buttons/Button"
 import OutlineButton from "../Buttons/OutlineButton"
-import classes from "./Li.module.scss"
+import classes from "./li.module.scss"
 
 interface IProps extends MaterialsLiType {
 	delay: number

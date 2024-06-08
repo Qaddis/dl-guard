@@ -1,7 +1,7 @@
 "use client"
 
 import NavLink from "../ui/NavLink"
-import classes from "./AppFooter.module.scss"
+import classes from "./app-footer.module.scss"
 
 export default function Footer() {
 	return (

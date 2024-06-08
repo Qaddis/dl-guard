@@ -1,6 +1,6 @@
 import type { LandingLiType } from "@/data"
 import { motion } from "framer-motion"
-import classes from "./Li.module.scss"
+import classes from "./li.module.scss"
 
 type PropsType = {
 	type: "advs" | "techs"

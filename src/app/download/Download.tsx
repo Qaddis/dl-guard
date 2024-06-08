@@ -2,7 +2,7 @@
 
 import ListElement from "@/components/ui/Li/MaterialsLi"
 import { mtls } from "@/data"
-import classes from "./Download.module.scss"
+import classes from "./download.module.scss"
 
 export default function Download() {
 	return (

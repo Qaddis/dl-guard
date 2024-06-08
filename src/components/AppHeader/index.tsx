@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import NavLink from "../ui/NavLink"
-import classes from "./AppHeader.module.scss"
+import classes from "./app-header.module.scss"
 
 export default function Header() {
 	const [isHidden, setIsHidden] = useState<boolean>(false)

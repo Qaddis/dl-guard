@@ -1,5 +1,5 @@
 import type { CSSProperties, PropsWithChildren } from "react"
-import classes from "./Buttons.module.scss"
+import classes from "./buttons.module.scss"
 
 interface IProps extends PropsWithChildren {
 	styles?: CSSProperties

@@ -6,7 +6,7 @@ import ListItem from "@/components/ui/Li/LandingLi"
 import { advs, techs } from "@/data"
 import { useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import classes from "./Home.module.scss"
+import classes from "./home.module.scss"
 
 export default function Home() {
 	const [amount, setAmount] = useState<number>(0.4)

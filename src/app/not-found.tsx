@@ -2,7 +2,7 @@
 
 import Button from "@/components/ui/Buttons/Button"
 import { useRouter } from "next/navigation"
-import classes from "./NotFound.module.scss"
+import classes from "./not-found.module.scss"
 
 export default function NotFoundPage() {
 	const navigation = useRouter()
