@@ -82,8 +82,8 @@
 	.landing {
 		flex-direction: column-reverse;
 		justify-content: center;
-		gap: 0;
-		padding: 20px 0;
+		column-gap: 0;
+		row-gap: 20px;
 
 		.heading {
 			text-align: center;
@@ -97,7 +97,6 @@
 
 		.info {
 			max-width: 80%;
-			margin-top: 20px;
 
 			.description {
 				text-align: center;
