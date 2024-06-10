@@ -1,5 +1,13 @@
 import { mtls } from "@/data"
+import type { Metadata } from "next"
 import Product from "./Product"
+
+export const metadata: Metadata = {
+	robots: {
+		index: false,
+		follow: false
+	}
+}
 
 export default function ProductPage({
 	params

@@ -40,11 +40,14 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		siteName: "DL Guard",
-		title: "DL Guard - система электронных пропусков",
-		description:
-			"DL Guard - система электронных пропусков с открытым исходным кодом и возможность дальнейшей доработки",
-		url: "https://dl-guard.vercel.app"
-	}
+		images: {
+			url: "./og-image.png",
+			alt: "DL Guard Website",
+			width: "1200",
+			height: "630"
+		}
+	},
+	creator: "Svyatoslav Barsukov"
 }
 
 export default function RootLayout({
