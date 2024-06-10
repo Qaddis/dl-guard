@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">DL Guard</h1>
 
-## Getting Started
+**DL Guard 2.0** - улучшенная версия [сайта](https://github.com/qaddis/dl-guard-web) моего школьного проекта за 10ый класс.
 
-First, run the development server:
+Основные изменения:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Новый стек и технологии**: (_TypeScript_ + _Next.js 14_ + _Framer Motion_ вместо _JavaScript_ + _React_ + _IntersectionObserve_);
+- **SEO**;
+- **Небольшие изменения в дизайне**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Технологии
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- _TypeScript_;
+- _Next.js 14_;
+- _Redux Toolkit_;
+- _Framer Motion_;
+- _Three_ (_@react-three/fiber_ & _@react-three/drei_ ).
+  В качестве пакетного менеджера я решил перейти с _npm_ на _pnpm_.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Материалы
 
-## Learn More
+- [ **Iconfinder**](https://iconfinder.com) - иконки (_VK_, _Telegram_, _Github_, _Burger_ (для бургер-меню), _Lock_ & _Lock with shield_ (OpenGraph баннер & логотип));
+- [ **Google Fonts**](https://fonts.google.com/) - шрифты (_Roboto Slab_, _Nunito_, _Dancing Script_, _Caveat_, _Marck Script_ (логотип))
+- [**Vercel**](https://vercel.com/home) - хостинг;
+- **Логотип**, **3д модель** и **OpenGraph баннер** - созданы мной.
 
-To learn more about Next.js, take a look at the following resources:
+## О проекте
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**DL Guard** - система электронных пропусков с открытым исходным кодом и чертежами устройств. Проект, который я создавал для своего учебного учреждения в качестве школьного проекта за 10ый класс.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Система состоит из нескольких элементов:
 
-## Deploy on Vercel
+- Считывающее устройство (**DL Guard | Device**) - считывает _уникальный идентификатор пропуска_ (далее - _UID_) у _RFID-карточки_ или _NFC_ телефона и выводит в _COM-порт_.
+- Компьютерное приложение (**DL Guard | PC**) - мониторит указанные _COM-порты_, получает _UID_, который выводит туда **DL Guard | Device**, и делает запрос на сервер (**DL Guard | Server**), ждёт ответа и выводит его пользователю.
+- Сервер (**DL Guard | Server**) - соединяется с БД _MongoDB_. Получает _UID_ в запросе от компьютерного приложения (**DL Guard | PC**), ищет пользователя в БД с таким же _UID_ и проверяет его статус (учится ещё или не учится) и отправляет ответ (разрешён вход или нет). Если не находит пользователя в БД - отправляет запрет на вход.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Скачать готовую систему можно на самом [сайте](https://dl-guard.vercel.app).
+Исходники можно найти в [Github репозитории](https://github.com/qaddis/dl-guard-sources).
