@@ -36,7 +36,15 @@ export const metadata: Metadata = {
 		"Система электронных пропусков",
 		"Qaddis",
 		"Электронные пропуска"
-	]
+	],
+	openGraph: {
+		type: "website",
+		siteName: "DL Guard",
+		title: "DL Guard - система электронных пропусков",
+		description:
+			"DL Guard - система электронных пропусков с открытым исходным кодом и возможность дальнейшей доработки",
+		url: "https://dl-guard.vercel.app"
+	}
 }
 
 export default function RootLayout({
